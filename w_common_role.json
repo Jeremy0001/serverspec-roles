@@ -56,6 +56,29 @@
               "password": "ex_admin_pw_1"
             }
           ]
+        },
+		    {
+          "vhost": {
+		        "docroot": "/websites/example.com/ssl",
+            "main_domain": "ssl.example.com",
+            "aliases": ["ssl2.example.com"],
+            "ssl": true
+          },
+          "deploy": {
+            "repo_path": "/websites/example.com/ssl",
+		        "repo_url": "https://git.examplewebsite.com/ssl.git"
+          },
+	        "connection_domain": {
+            "db_domain": "db.examplewebsite.com",
+            "webapp_domain": "webapp.examplewebsite.com",
+            "varnish_domain": "varnish.examplewebsite.com"
+          },
+          "mysql": [
+            { "db": "ssl_db",
+              "user": "ssl_user",
+              "password": "ssl_passwd"
+            }
+          ]
         }
       ]
     }
