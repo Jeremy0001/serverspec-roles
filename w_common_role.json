@@ -79,6 +79,15 @@
               "password": "ssl_passwd"
             }
           ]
+        },
+        {
+          "vhost": {
+            "docroot": "/websites/nodocroot.com",
+            "main_domain": "nodocroot.com",
+            "aliases": ["do-not-create-document-root.com"],
+            "create_docroot_dir": false,
+            "ssl": true
+          }
         }
       ]
     }
