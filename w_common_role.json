@@ -12,10 +12,10 @@
             "aliases": ["www.examplewebsite.com"]
           },
           "deploy": {
-			      "repo_ip": "9.9.9.9",
-			      "repo_path": "/websites/examplewebsite.com",
-		        "repo_domain": "git.examplewebsite.com",
-		        "repo_url": "https://git.examplewebsite.com/www.git"
+            "repo_ip": "9.9.9.9",
+            "repo_path": "/websites/examplewebsite.com",
+            "repo_domain": "git.examplewebsite.com",
+            "repo_url": "https://git.examplewebsite.com/www.git"
           },
           "connection_domain": {
             "db_domain": "db.examplewebsite.com",
@@ -31,17 +31,17 @@
             "purge_target": true
           }
         },
-		    {
+        {
           "vhost": {
-		        "docroot": "/websites/examplewebsite.com/admin",
+            "docroot": "/websites/examplewebsite.com/admin",
             "main_domain": "admin.examplewebsite.com",
             "aliases": ["admin.examplewebsite.com"]
           },
           "deploy": {
             "repo_path": "/websites/examplewebsite.com/admin",
-		        "repo_url": "https://git.examplewebsite.com/admin.git"
+            "repo_url": "https://git.examplewebsite.com/admin.git"
           },
-	        "connection_domain": {
+          "connection_domain": {
             "db_domain": "db.examplewebsite.com",
             "webapp_domain": "webapp.examplewebsite.com",
             "varnish_domain": "varnish.examplewebsite.com"
@@ -57,18 +57,18 @@
             }
           ]
         },
-		    {
+        {
           "vhost": {
-		        "docroot": "/websites/example.com/ssl",
+            "docroot": "/websites/example.com/ssl",
             "main_domain": "ssl.example.com",
             "aliases": ["ssl2.example.com"],
             "ssl": true
           },
           "deploy": {
             "repo_path": "/websites/example.com/ssl",
-		        "repo_url": "https://git.examplewebsite.com/ssl.git"
+            "repo_url": "https://git.examplewebsite.com/ssl.git"
           },
-	        "connection_domain": {
+          "connection_domain": {
             "db_domain": "db.examplewebsite.com",
             "webapp_domain": "webapp.examplewebsite.com",
             "varnish_domain": "varnish.examplewebsite.com"
@@ -77,6 +77,22 @@
             { "db": "ssl_db",
               "user": "ssl_user",
               "password": "ssl_passwd"
+            }
+          ]
+        },
+        {
+          "vhost": {
+            "docroot": "/websites/multi-repo-vhost",
+            "main_domain": "multi-repo-vhost.com"
+          },
+          "deploy": [
+            {
+              "repo_path": "/websites/multi-repo-vhost.com",
+              "repo_url": "https://git.examplewebsite.com/multi-repo-vhost.com-repo1.git"
+            },
+            {
+              "repo_path": "/websites/multi-repo-vhost.com/repo2",
+              "repo_url": "https://git.examplewebsite.com/multi-repo-vhost.com-repo2.git"
             }
           ]
         },
